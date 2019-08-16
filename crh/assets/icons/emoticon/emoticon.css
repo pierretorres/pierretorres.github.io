@@ -1,0 +1,33 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 27/11/2018 15:34
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Emoticon.eot");
+  src: url("./Emoticon.eot?#iefix") format("embedded-opentype"),
+       url("./Emoticon.woff") format("woff"),
+       url("./Emoticon.ttf") format("truetype"),
+       url("./Emoticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Emoticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}
+
+.flaticon-frown:before { content: "\f100"; }
+.flaticon-meh-face-emoticon:before { content: "\f101"; }
+.flaticon-smile:before { content: "\f102"; }

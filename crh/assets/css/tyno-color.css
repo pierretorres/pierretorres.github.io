@@ -1,0 +1,186 @@
+/* 
+    Color styling
+*/
+
+/*
+    ---------- MENU ----------
+    Generic Elements
+    - text
+    - buttons
+
+    Sections
+    - navbar
+    - info
+    - gallery
+    - reports
+    - dinamap
+    - icons
+    - modals
+
+    - footer
+
+*/
+
+/* text 
+    Color of text across the presentation
+*/
+
+h1, h2, h3, h4, p, td {
+    color: #777777;
+}
+
+.title h1 {
+    color: #364baa;
+}
+
+/* buttons */
+button {
+    background-color: #364baa;
+}
+
+.button_with_icon {
+    background-color: #364baa;
+    color: #fff;
+}
+
+.button_with_icon:hover {
+    background-color: #7583fd;
+}
+
+
+/* - navbar */
+/* -- active-items */
+
+li.navbar__item--active {
+    background-color: #364baa;
+}
+
+li.navbar__item--active a {
+    color: #fff;
+}
+
+/* - info */
+
+.accordion__link {
+    color: #364baa;
+
+}
+
+.accordion__link:hover {
+    color: #b4bbfc;
+}
+
+/* - gallery */
+
+/* - carousel */
+
+.carousel__control {
+    color: #364baa;
+}
+
+.carousel__control:hover {
+    color: #b4bbfc;
+}
+
+
+/* - reports */
+
+/* -- row background */
+/* tbody.report__body tr:nth-child(odd) {
+    background-color: #f9f9f9;    
+} */
+
+.odd {
+    background-color: #f9f9f9;    
+}
+
+/* -- file icon */
+td.report__icon > a {
+    color: #364baa;
+}
+
+/* -- file icon */
+td.report__icon > a:hover {
+    color: #b4bbfc;    
+}
+
+/* -- code number link */
+p.code__number > a {
+    color: #364baa;
+}
+
+/* -- code number link */
+p.code__number > a:hover {
+    color: #b4bbfc;
+}
+
+/* - dinamap */
+
+/* -- all states */
+.svgMap path:nth-child(n) {
+	fill: #228b71;
+}
+
+/* -- especific states */
+#path48 {
+    fill: #364baa;
+}
+
+#path48:hover {
+    fill: #a5a5a5;
+}
+
+#path68 {
+    fill: #364baa;
+}
+
+#path68:hover {
+    fill: #a5a5a5;
+}
+
+/* -- map icons */
+i.flaticon-dot-and-circle {
+    color: #7583fd;
+}
+
+i.flaticon-dot-and-circle:hover {
+    color: #b4bbfc;
+}
+
+/* -- dinamicWindow links */
+.dynamicWindow__item a{
+    color: #364baa;
+}
+
+.dynamicWindow__item a:hover{
+    color: #b4bbfc;
+}
+
+/* - icons */
+
+.flaticon-pdf-1::before {
+    color: #364baa;
+}
+
+.flaticon-pdf-1::before:hover {
+    color: #707aa8;
+}
+
+.flaticon-pdf-file-format-symbol::before {
+    color: #ff8f44;
+}
+
+/* - modals */
+
+.modal__link {
+    color: #ffffff;
+}
+.modal__link:hover{
+    color: #b5b2dd;
+}
+
+/* - footer */
+
+footer.footer {
+    background-color: #eaeaea;
+}

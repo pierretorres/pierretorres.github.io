@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../../assets/css/open-sans.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/flaticon/flaticon.css">
+
+    <!-------------------------- CSS ----------------------------------->
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/css/tyno-color.css">
+    <link rel="stylesheet" href="../../assets/css/tyno-main.css">
+
+    
+
+    
+
+</head>
+<body>
+
+    <nav class="navigation">
+    <div class="navbar container">
+        <div class="navbar__brand">
+            <img src="../../assets/img/logo.png" alt="Logo dummy">
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item "> 
+                <a href="../gen/index.html">Inicio</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="../gen/opcoes.html">Negócios</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="../gen/premissas.html">Premissas</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="../gen/metodologia.html">Metodologia</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="../gen/quadros.html">Quadros Consolidados</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="../gen/anexos.html">Anexos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <section class="outdoor outdoor--medium outdoor--headline">
+        <!-- It uses image as background -->
+        <div class="outdoor__title outdoor__title--medium">
+            Pesquisa de Laudos
+        </div>
+    </section>
+
+    <section class="outdoor outdoor--small outdoor--headline">
+        <!-- It uses image as background -->
+        <div class="outdoor__title outdoor__title--small">
+            Pesquisa de Laudos
+        </div>
+    </section>
+
+    <div class="back container">
+        <button class="back__button" onclick="history.go(-1);return true;">
+            VOLTAR
+        </button>
+    </div>
+
+    <section class="info container">
+        <div class="title">
+            <h1>Pesquisa de Laudos</h1>
+            <button class="back__button" onclick="history.go(-1);return true;">
+               VOLTAR
+            </button>        
+        </div>
+
+        <div class="text-content">
+            <p>
+                Fusce vel dui. Quisque id mi. Etiam sit amet orci eget eros faucibus tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
+                cubilia Curae; In ac dui quis mi consectetuer lacinia.Fusce vulputate eleifend sapien. Pellentesque commodo eros a enim. Phasellus ullamcorper ipsum rutrum 
+                nunc. Donec mollis hendrerit risus. Curabitur vestibulum aliquam leo.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="searchForm container">
+        <form>
+            <div class="form-group">
+                <!-- Formulário para escolha do arquivo de laudos -->
+                <label for="inputCsvFileName">Escolha do grupo de laudos a pesquisar:</label>
+                <select id="inputCsvFileName" class="form-control">
+                    <!-- <option selected>-</option>
+                    <option>Laudos Materiais Corvinal</option>
+                    <option>Laudos Materiais Sucvi</option>
+                    <option>Laudos Serviços Lufa Lufa</option> -->
+                </select>
+            </div>
+            <fieldset disabled>
+                <!-- fieldset>disabled serve para restringir o uso dos filtros, caso
+                o usuário não escolha um arquivo de laudos primeiro -->
+                <div class="form-row">
+                    <!-- Formulários de pesquisa de laudos -->
+                    <!-- 
+                        novos formulários podem ser adicionados aqui
+                        lembrando só de separar os formulários de pesquisa
+                        do formulário de escolha do arquivo 
+                    -->
+                    <div class="form-group col-md-3">
+                        <label for="inputReportNumber">Nº Laudo</label>
+                        <input type="text" class="form-control inputField" id="inputReportNumber" placeholder="[opcional]">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputItemCode">Codigo Item</label>
+                        <input type="text" class="form-control inputField" id="inputItemCode" placeholder="ex. 4078645">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputDescription">Descrição</label>
+                        <input type="text" class="form-control inputField" id="inputDescription" placeholder="ex. Bomba motor valv 4 ou bomba">
+                    </div>
+                </div>
+            
+                <button id="submitBtn" type="button" class="btn btn-primary">Pesquisar</button>
+                <!-- <button  type="button" class="btn btn-warning">Limpar pesquisa</button> -->
+            </fieldset>
+          </form>
+    </section>
+
+    <section class="reports container">
+        <table class="report__table">
+            <thead class="report__head">
+                <tr class="report__row">
+                    <th class="report__icon">
+                        Laudo
+                    </th>
+                    <th class="report__number">
+                        Código do Item
+                    </th>
+                    <th class="report__description">
+                        Descrição
+                    </th>
+                    <th class="report__cleanFilters">
+                        <button id="cleanSearch" type="button" class="btn btn-warning btn-sm">Limpar Pesquisa</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="report__body">
+                <!-- reportList -->
+                <!-- <tr class="report__row">
+                    <td class="report__icon">
+                        <a onclick="nw.Window.open('../../../../../assets/reports/undefined.pdf', {width: 1366, height: 768});">
+                            <i class="flaticon-pdf"></i>
+                        </a>
+                    </td>
+                    <td class="report__number">
+                        <p class="code__title">Código do Item</p>
+                        <p class="code__number">
+                            <a onclick="nw.Window.open('../../../../../assets/reports/undefined.pdf', {width: 1366, height: 768});">undefined</a>
+                        </p>
+                    </td>
+                    <td class="report__description">
+                        <p class="description__title">Descrição</p>
+                        <p class="description__text">undefined</p>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="footer">
+        <p>TYNO Consultoria Tributária e Empresarial</p>
+    </footer>
+    <script src="../../assets/js/jquery_min.js"></script> <!-- v3.3.1 -->
+    <script src="../../assets/js/bootstrap.min.js"></script> <!-- v4.1.3-->
+    <script src="../../assets/js/searchAndOpenReports.js"></script>
+</body>
+</html>

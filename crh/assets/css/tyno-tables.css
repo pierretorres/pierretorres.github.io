@@ -1,0 +1,324 @@
+/*
+	Css to style only-table-sheets	
+		https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables 
+		https://css-tricks.com/complete-guide-table-element/ 
+*/
+
+/*
+    -------- MENU -----------
+
+    - Main structure (M)
+    -- Table Title
+    -- <table> (M)
+    -- <thead> (M)
+    -- <tbody> (M)
+    -- excel-like filter
+    -- Input Form Filter
+
+	- Especific structure (E)
+	-- tabela_diagnostico_icms_beneficios_fiscais.html
+	--- <thead> (E)
+    --- <tbody> (E)
+    -- tabela_diagnostico_icms_criterio_adotado.html
+    --- <thead> (E)
+	--- <tbody> (E)
+	-- tabela_diagnostico_icms_procedimentos_fiscais.html
+	--- <thead> (E)
+	--- <tbody> (E)
+	-- tabela_diagnostico_icms_tratamentos_especiais.html
+	-- tributo_federal_suzano_ipi.html 
+	-- tributo_federal_suzano_piscofins.html
+	-- tabela_diagnostico_suzano_fical_ipi.html
+	-- tabela_diagnostico_suzano_fiscal_piscofins.html
+
+
+
+
+	-- tabela_tributo_federal_fibria.html
+	--- <thead> (E)
+	--- <tbody> (E)
+	--- media tributo-federal-fibria
+	---- <thead> (E)
+	---- <tbody> (E)
+
+
+*/
+
+
+/* -------------------------------------
+    - Main structure
+    (basic style for all tables)
+---------------------------------------*/
+
+/* -- Table Title */
+
+.table__topHeader {
+	display: block;
+	width: 100%;
+	height: 50px;
+	background-color: #f9f9f9;
+	position: fixed;
+	top: 0;
+	z-index: 3000;
+	
+}
+
+.table__backButton {
+	display: block;
+	float: left;
+	height: 100%;
+	width: 20%;
+}
+
+.table__backButton > button {
+	position: relative;
+	padding: 7px;
+	background-color: #0777bc;
+	border: 0;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.table__title {
+	display: block;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px; 
+	width: 60%;
+}
+
+.table__title > h3 {
+	margin: 0;
+	text-align: center;
+
+}
+
+.filter__clear {
+	display: block;
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+
+.filter__clear > button {
+	position: relative;
+	padding: 7px;
+	background-color: #C0392B;
+	border: 0;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+button {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* -- <table> (M) */
+
+section.table table{
+	margin-bottom: 80px;
+	table-layout: fixed;
+	font-size: 12px;
+}
+
+section.table tr {
+	width: 100%;
+	display: flex;
+}
+
+section.table td,th {
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 5px; 
+	padding-bottom: 5px; 
+	border: 1px solid #ddd;
+	font-weight: 300;
+}
+
+
+/* -- <thead> (M) */
+
+section.table thead { 
+	width: 100%;
+	display: block;        
+	position: fixed;
+	top: 50px;
+	z-index: 3000;
+}
+
+section.table thead > tr { 
+	display: block;
+	width: 100%;
+	padding-top: 0; 
+	padding-bottom: 0; 
+}
+
+section.table thead th {
+	position: relative;
+	float: left;
+	text-align: center;
+	background-color: #dbdbdb;
+	border: 1px solid #ddd;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 10px;
+	height: 100px;
+}
+
+/* -- <tbody> (M) */
+
+section.table tbody {
+	margin-bottom: 80px;
+	position: absolute;
+	width: 100%;
+	top: 150px;
+}
+
+section.table tbody tr.invisible {
+	display: none;
+}
+
+tbody > tr.odd {
+	background-color: #f9f9f9;
+}
+
+section.table tbody td {
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+section.table tbody p {
+	margin-bottom: 5px;
+
+}
+
+/* -- excel-like filter */
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-top: 5px solid #000;
+}
+
+.arrow-down.active {
+	border-top: 5px solid #ff0000;
+}
+
+section.table .dropdown-menu > a {
+	font-size: 10px;
+}
+
+/* -- Input Form Filter */
+
+.input-form-filter {
+	position: absolute; 
+	bottom: 5%; 
+	left: 0;
+	background-color: transparent;
+	height: 20px;
+	width: 100%;
+}
+
+.form-filter {
+	border-top: 0;
+	border-bottom: 0;
+	border-right: 0;
+	border-left: 0;
+	position: relative;
+	left: 0;
+	height: 100%; 
+	width: 80%;
+	padding: 0;
+	margin: 0;
+}
+
+/* -------------------------------------
+    - Especific structure (E)
+    (especific style for each table)
+---------------------------------------*/
+
+/* -- modelo.html */
+
+/* --- <thead> (E) */
+
+#modelo-da-apresentação thead th {
+    height: 70px;
+}
+
+#modelo-da-apresentação thead th:nth-child(1) {
+	width: 10%;
+}
+
+#modelo-da-apresentação thead th:nth-child(2) {
+	width: 10%;
+}
+
+#modelo-da-apresentação thead th:nth-child(3) {
+	width: 20%;
+}
+
+#modelo-da-apresentação thead th:nth-child(4) {
+	width: 20%;
+}
+
+#modelo-da-apresentação thead th:nth-child(5) {
+	width: 10%;
+}
+
+#modelo-da-apresentação thead th:nth-child(6) {
+	width: 10%;
+}
+
+#modelo-da-apresentação thead th:nth-child(7) {
+	width: 10%;
+}
+
+#modelo-da-apresentação thead th:nth-child(8) {
+	width: 10%;
+}
+
+/* --- <tbody> (E) */
+
+#modelo-da-apresentação tbody {
+    top: 120px;
+}
+
+#modelo-da-apresentação tbody td:nth-child(1) {
+	width: 10%;
+}
+
+#modelo-da-apresentação tbody td:nth-child(2) {
+	width: 10%;
+}
+
+#modelo-da-apresentação tbody td:nth-child(3) {
+	width: 20%;
+}
+
+#modelo-da-apresentação tbody td:nth-child(4) {
+	width: 20%;
+}
+
+#modelo-da-apresentação tbody td:nth-child(5) {
+	width: 10%;
+}
+
+#modelo-da-apresentação tbody td:nth-child(6) {
+	width: 10%;
+}
+
+#modelo-da-apresentação tbody td:nth-child(7) {
+	width: 10%;
+}
+
+#modelo-da-apresentação tbody td:nth-child(8) {
+	width: 10%;
+}
+
